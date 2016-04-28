@@ -1,0 +1,50 @@
+{
+	"products": [
+	{
+		"image": "",
+		"brandName": "BB ROYAL",
+		"productName": "Black Pepper/Kali Mirch",
+		"detail": "500gm Pouch",
+		"price": 555
+	},
+
+	{
+		"image": "",
+		"brandName": "MTR",
+		"productName": "Powder - Turmeric",
+		"detail": "500gm Pouch",
+		"price": 200
+	},
+
+	{
+		"image": "",
+		"brandName": "DAKSHIN'S",
+		"productName": "Biriyani Pulav - Masala",
+		"detail": "100gm Pouch",
+		"price": 100
+	},
+
+	{
+		"image": "",
+		"brandName": "MTR",
+		"productName": "Tamarind/Imli",
+		"detail": "500gm Pouch",
+		"price": 70
+	},
+
+	{
+		"image": "",
+		"brandName": "EVEREST",
+		"productName": "Powder - Cumin",
+		"detail": "200gm Pouch",
+		"price": 78
+	},
+
+	{
+		"image": "",
+		"brandName": "MDH",
+		"productName": "Masala - Garam",
+		"detail": "100gm Pouch",
+		"price": 54
+	}
+]}

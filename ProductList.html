@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="ProductListStyle.css"/>
+	</head>
+
+
+	<body ng-app="productListingApp" ng-controller="productListingCtrl">
+
+			<h2> Masalas & Spices {{totalProduct}} </h2>
+
+			<div id="ProductList" class="product-list-container">
+				<ul class="product-list small-block-grid-3">
+					<li ng-repeat="product in products" class="show-list">
+						<figure>
+						<img ng-src="{{product.image}}" alt="{{product.productName}}" />
+							<figcaption>
+								<h2>{{product.brandName}}</h2>
+								<h3>{{product.productName}}</h3>
+								<h2>{{product.detail}}</h2>
+								<h3>Rs {{product.price}}</h3>
+								<button ng-click="addToCart(product);" ng-if="function(quantity){if(quantity>0) return false;}"  id="addItem" class="add-item-button">Add to cart</button>
+								<div ng-if="quantity" class="add-remove-item-button">
+									<button ng-click="removeFromCart(product)">-</button>  {{quantity}} in cart   <button ng-click="addToCart(product)">+</button>
+								</div>
+							</figcaption>
+						</figure>
+					</li>
+				</ul>
+			</div>
+
+			<div ng-if="cart.length" id="diaplayShoppingCart" class="display-shopping-cart">
+				<h4>Your Cart Summary</h4>
+				<span class="items-in-cart"> <p class="one">Items in Cart</p> <br> <p class="two">{{cart.length}}</p> </span>
+				<span class="total-cart-price"> <p class="three">Total Rs</p> <br> <p class="four">{{TotalCartPrice}} </p> </span>
+
+
+
+				<hr>
+				<table id="table-cart">
+					<tr>
+						<th>Item</th>
+						<th>Quantity</th>
+						<th>Total Rs</th>
+						<th></th>
+					</tr>
+					<tr ng-repeat="product in cart">
+						<td>{{product.brandName}} {{product.productName}}</td>
+						<td>{{quantity}}</td>	
+						<td>{{quantity * product.price}}</td>
+						<td><button ng-click="removeItem()"id="removeItem" class="remove-item-button">Remove</button></td>
+					</tr>
+				</table>
+			</div>
+
+
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+
+			<script src="ProductListScript.js"></script>
+
+	</body>
+
+
+</html>
